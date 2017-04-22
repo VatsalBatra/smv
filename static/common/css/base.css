@@ -560,7 +560,7 @@ a.navbar-brand.page-scroll {
 }
 .services-section {
     height: auto;
-    padding-top: 35px;
+   
     text-align: center;
     background: #eee;
 }
@@ -777,7 +777,9 @@ section#achievements {
     background-color: #fff;
 }
 
-
+.container.contact_property {
+    margin-left: 0px;
+}
 
 @media screen and (max-width: 767px){
 
