@@ -1,6 +1,10 @@
 body{
 	background-color: 'red';
 }
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                    CREW BUTTON
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 .push_button {
     position: relative;
     width:220px;
@@ -9,7 +13,7 @@ body{
     color:#FFF;
     text-decoration:none;
     line-height:43px;
-    font-family:'Oswald', Helvetica;
+      font-family: "Roboto Slab";
     display: block;
     margin: 30px;
 }
@@ -268,12 +272,14 @@ body{
     position: relative;
     width: 80%;
     margin: auto;
-    padding-top: 8%;
+   
+
     padding-bottom: 8%;
+
 }
 #About h2{
     padding-top: 2%;
-    font-family: "Montserrat";
+  font-family: "Roboto Slab";
     text-align: center;
     font-size: 40;
 }
@@ -281,7 +287,7 @@ body{
     text-align: center;
     padding-top: 1%;
     color: grey;
-    font-family: "Droid Serif";
+   font-family: "Roboto Slab";
     font-style: italic;
     font-size: 16px;
 }
@@ -307,7 +313,7 @@ body{
     text-align: left;
 }
 #About h4{
-    font-family: "Montserrat";
+     font-family: "Roboto Slab";
     font-size: 18px;
     font-weight: bold;
 }
@@ -352,6 +358,14 @@ body{
 }
 #gol-hide {
     display: none;
+}
+#About {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 8%;
+    margin-top: -7%;
 }
 @media screen and (max-width: 720px) {
     #line {
@@ -609,7 +623,15 @@ div#sponsers-container {
     height: 12px;
     margin: 0;
     background-color: #EE4900;
+
 }
+
+
+h1#crew_heading {
+    margin-top: -2px;
+    margin-bottom: 33px;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * 
                     PAGE LOADER
 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -740,8 +762,10 @@ div#img_div_faculty {
     width: 68%;
    
 }
-#button_wala{
-  height: 200px;
+#button_wala {
+    height: 200px;
+    top: -18.5px;
+    left: 20px;
 }
 
 
@@ -779,12 +803,18 @@ a.page-scroll.nav_button {
 
 
 section#achievements {
-    background-color: #fff;
+    background-color:#fff;
+    padding-top: 2%;
 }
-
+section#partners {
+    padding-top: 0px;
+}
 .container.contact_property {
     margin-left: 0px;
 }
+
+
+
 
 @media screen and (max-width: 767px){
 
@@ -792,6 +822,15 @@ section#achievements {
 
     height: 35%;
     padding-bottom: 10px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FD5800;
+}
+.navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle .icon-bar {
+    background-color:  #FD5800;
 }
 .navbar-toggle .icon-bar:nth-of-type(2) {
       top: 1px;
@@ -825,6 +864,7 @@ section#achievements {
     }
 
 
+
     div#partners_wrapper {
     display: inline-flex;
 }
@@ -839,5 +879,6 @@ div#partners_wrapper {
 
 
 }
+
 
 
