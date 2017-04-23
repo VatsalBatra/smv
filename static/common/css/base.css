@@ -812,7 +812,17 @@ section#partners {
 .container.contact_property {
     margin-left: 0px;
 }
+@media screen and (max-width: 881px){
+    div#faculty_head {
+    display: block;
+    }
+    div#faculty_disc {
+    padding-left: 126px;
+    }
 
+
+
+}
 
 
 
