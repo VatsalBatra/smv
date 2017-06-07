@@ -19,9 +19,10 @@ from django.contrib import admin
 from django.conf.urls import url, include, static
 from django.contrib import admin
 from django.conf import settings
+from content import views as content_views
 from .views import home
 
 urlpatterns = [
-    url(r'^$', home),
+    url(r'^$', content_views.first_page),
     url(r'^admin/', admin.site.urls),
 ] + static.static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
