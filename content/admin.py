@@ -3,18 +3,24 @@ from .models import image_slide,our_ride,crew_sir,crew_members,partners,achievem
 
 @admin.register(image_slide)
 class ProductsAdmin(admin.ModelAdmin):
-    list_display = ['caption']
+    list_display = ['caption','image_tag']
 @admin.register(our_ride)
+class ProductsAdmin_ourride(admin.ModelAdmin):
+    list_display = ['title','image_tag']
+
+    
 @admin.register(crew_sir)
 @admin.register(crew_members)
-
-@admin.register(achievement)
 class ProductsAdmin(admin.ModelAdmin):
     list_display = ['title']
 
+@admin.register(achievement)
+class ProductsAdmin(admin.ModelAdmin):
+    list_display = ['title','image_tag']
+
 @admin.register(partners)
 class ProductsAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name','image_tag']
 
 
 
