@@ -30,6 +30,9 @@ class crew_sir(models.Model):
 	text_1 = models.CharField(max_length = 1024,default = " " ,blank = True);
 	text_2 = models.CharField(max_length = 1024,default = " " ,blank = True);
 	text_3 = models.CharField(max_length = 1024,default = " " ,blank = True);
+	def image_tag(self):
+   		return mark_safe('<img src="%s" width="150" height="150" />' % (self.sir_img.url))
+
 
 class crew_members(models.Model):
 	title = models.CharField(max_length = 1024,default = " " ,blank = True);
@@ -39,4 +42,11 @@ class partners(models.Model):
 	links = models.CharField(max_length = 1024,default = " " ,blank = True);
 	def image_tag(self):
    		return mark_safe('<img src="%s" width="150" height="150" />' % (self.logo.url))
+
+class contact_info(models.Model):
+	number = models.CharField(max_length = 1024,default = " " ,blank = True);
+	address = models.CharField(max_length = 1024,default = " " ,blank = True);
+	email = models.CharField(max_length = 1024,default = " " ,blank = True);
+class about(models.Model):
+	info =  models.TextField(max_length = 10024,default = " ",blank = True);
 

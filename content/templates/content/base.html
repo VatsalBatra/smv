@@ -122,53 +122,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 id ="about_top_heading">About</h1>
-                        up vote
-195
-down vote
-For an easy revert if it's just a mistake (perhaps you forked a repo, then ended up pushing to the original instead of to a new one) here's another possibility:
-
-git reset --hard 71c27777543ccfcb0376dcdd8f6777df055ef479
-Obviously swap in that number for the number of the commit you want to return to.
-
-Everything since then will be deleted once you push again. To do that, the next step would be:
-
-git push --force
-shareimprove this answer
-up vote
-195
-down vote
-For an easy revert if it's just a mistake (perhaps you forked a repo, then ended up pushing to the original instead of to a new one) here's another possibility:
-
-git reset --hard 71c27777543ccfcb0376dcdd8f6777df055ef479
-Obviously swap in that number for the number of the commit you want to return to.
-
-Everything since then will be deleted once you push again. To do that, the next step would be:
-
-git push --force
-shareimprove this answer
-up vote
-195
-down vote
-For an easy revert if it's just a mistake (perhaps you forked a repo, then ended up pushing to the original instead of to a new one) here's another possibility:
-
-git reset --hard 71c27777543ccfcb0376dcdd8f6777df055ef479
-Obviously swap in that number for the number of the commit you want to return to.
-
-Everything since then will be deleted once you push again. To do that, the next step would be:
-
-git push --force
-shareimprove this answerup vote
-195
-down vote
-For an easy revert if it's just a mistake (perhaps you forked a repo, then ended up pushing to the original instead of to a new one) here's another possibility:
-
-git reset --hard 71c27777543ccfcb0376dcdd8f6777df055ef479
-Obviously swap in that number for the number of the commit you want to return to.
-
-Everything since then will be deleted once you push again. To do that, the next step would be:
-
-git push --force
-shareimprove this answer
+                        {% for a in about %}
+                        {{a.info}}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -388,11 +344,13 @@ Everything since then will be deleted once you push again. To do that, the next 
 
                       <!-- CONTACT INFO -->
                           <div class="col-lg-6" id = "contact_address_info"><h5>Contact Us</h5>
-      <div><i class="fa fa-phone icon-2x" style="color:green; "></i> +919953-071-448</div>
-      <div><i class="fa fa-map-marker icon-2x" style="color:orange;"></i> D-5,A Vijay Nagar Single Storey Delhi 110009</div>
-      <div><i class="fa fa-envelope-o icon-2x" style="color:yellow;"></i> aparnaenterprises2016@gmail.com</div>
+                          {% for c in contact %}
+      <div><i class="fa fa-phone icon-2x" style="color:green; "></i> +91{{c.number }}</div>
+      <div><i class="fa fa-map-marker icon-2x" style="color:orange;"></i> {{c.address }}</div>
+      <div><i class="fa fa-envelope-o icon-2x" style="color:yellow;"></i> {{c.email }}</div>
 
-       
+
+       {% endfor %}
       </div>
                 </div>
 
