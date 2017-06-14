@@ -130,7 +130,6 @@
             </div>
         </section>
 
-
        <!--Achievemnets Section -->
         <section id="achievements" class="services-section">
       <section id="About">
@@ -152,13 +151,13 @@
         </div>
         {% endfor %}
          <div ><button id ="but">OUR <br>STORY<br> CONTINUES <br> ...</button></div>
+
         
         <section id="line"></section>
 
         </main>
             </section>
             </section>
-      
         <!-- Our Ride Section -->
         <section id="our_ride" class="contact-section">
             <div class="container">
@@ -175,18 +174,18 @@
 </div>
 
   
-                
             </div>
         </section>
-        
+
+
     <!-- Our Crew Section -->
     <div id ="crew"> <p> .</p>
     <p>. </p>
-    </div>
-  
+
+
    <h1 id ="crew_heading"><center>Crew</center></h1>
-    <div id ="complete_wrapper">
-  
+
+ 
   <div class="col-lg-1"></div>
     <div  class="col-lg-7">For an easy revert if it's just a mistake (perhaps you forked a repo, then ended up pushing to the original instead of to a new one) here's another possibility:
 
@@ -195,21 +194,25 @@ Obviously swap in that number for the number of the commit you want to return to
 
 Everything since then will be deleted once you push again. To do that, the next step would be:</div>
   
-    <div id ="button_wala" class="col-lg-4" onclick="myFunction3()" >
-<a  class="push_button red">Our Esteem Team</a>
+    <div id ="button_wala" class="col-lg-4"  >
+<a  class="push_button red" onclick="myFunction3()" >Our Esteem Team</a>
+
+    </div>
 
     </div>
     <div id = "empty_crew_div" class="col-lg-12" ></div>
     <div id = "our_crew"> 
 <p>.</p>
                <h3 id ="crew_faculty_top"><center>Faculty-Head</center></h3>
-        <div class ="post" id =  "faculty_head" >
-        <div class="aos-item" aos="fade-up"  id ="img_div_faculty">
+        <div id = "faculty_wrapper">
+     <!--    <div class ="post col-lg-2 " id =  "empty" >.</div> -->
+        <div class ="post col-lg-4 " id =  "faculty_head" >
         {% for s in sir %}
-            <img class="col-lg-6" id ="faculty_pic " src="{{ s.sir_img.url }}" alt="My image"/>
+            <img  id ="faculty_pic " class="img"  src="{{ s.sir_img.url }}" alt="My image"/>
             </div>
-
-            <div  id ="faculty_disc" class="col-lg-4" >
+<!--              <div class ="post col-lg-2 " id =  "empty" >.</div> -->
+            <div  id ="faculty_disc" class ="col-lg-4 " >
+             
         
             <div class ="faculty_info_1"><h3><strong><center>{{s.title}}</center></strong></h3></div>
             <div class ="faculty_info_1"><h4><u><center>{{s.text_1}}</center></u></h4></div>
@@ -218,8 +221,9 @@ Everything since then will be deleted once you push again. To do that, the next 
         
             </div>
             {% endfor %}
+           
+        </div>
                 <div class="col-lg-2" ></div>
-            }
            
         </div>
                  <h3><center>Student-Members</center></h3> 
@@ -228,33 +232,35 @@ Everything since then will be deleted once you push again. To do that, the next 
             <div class ="faculty_info">{{ m.title }}</div>
             {% endfor %}
            
-</div>
+            </div>
 
 
 
+<!--SPONSORS -->
+<div id = "sliding_wrapper">
  <div id ="crew_wrapper">
 
     <section id="partners" class="services-section aos-item partners" aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12" id="sponsers-container">
-                        <center><h1 id ="sponsers-heading">Partners</h1></center>
+                <div class="col-lg-12" id="sponsors-container">
+                        <center><h1 id ="sponsors-heading">Partners</h1></center>
                     <div id ="partners_wrapper">
                     {% for p in partners %}
                        
                         {% if forloop.first %}
-                        <div class="row">
+                        <div class="row partners_section">
                         {% endif %}
                             <div class="col-sm-3 partners_img logo-div">
 
-                                <p><a href=""><img class="partner_inner_img" src="{{p.logo.url}}" alt="My image"/></a></p>
+                                <div id ="img_div"><p><a href="{{p.links}}"><img class="partner_inner_img" src="{{p.logo.url}}" width="200px" height="200px" alt="My image"/></a></p></div>
                                 <h3 class ="logo_heading"><a href="{{p.links}}">{{p.name}}</a></h3>
                             </div>
                         {% if forloop.counter|divisibleby:"4" %}
 
                             </div>
                             {% if not forloop.last %}
-                                <div class="row">
+                                <div class="row partners_section">
                             {% endif %}
                         {% endif %}
                         {% if forloop.last %}
@@ -266,9 +272,8 @@ Everything since then will be deleted once you push again. To do that, the next 
                 </div>
             </div>
         </div>
-            </div>
         </section>
-
+    </div>
 
  
 
@@ -360,12 +365,14 @@ Everything since then will be deleted once you push again. To do that, the next 
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                      <p style="color:rgb(17, 17, 17);">Copyright <i class="fa fa-copyright"></i><a  href="https://github.com/VatsalBatra/" target="_blank" >Vatsal Batra </a><a href="https://www.facebook.com/vatsal.batra" style="color:#4267b2" target="_blank"><i  class="fa fa-facebook-official" aria-hidden="true"></i></a></p>
+                      <p><i class="fa fa-phone icon-2x" style="color:green; "></i> 9650783868</p>
                 </div>
             </div>
         </footer>
 
         </section>
+        </div>
            <script src="{% static 'common/js/jquery-2.2.1.min.js' %}"></script>
            <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
                <script src="{% static 'common/js/jquery.js' %}"></script> 
@@ -401,7 +408,7 @@ Everything since then will be deleted once you push again. To do that, the next 
 
     function myFunction3(){
 
-    document.getElementById("crew_wrapper").style.top= '100%';
+    document.getElementById("sliding_wrapper").style.top= '100%';
 
        
     }
@@ -454,7 +461,6 @@ function showPage() {
 });
         });
 </script>
-</div>
 </div>
 
 <script>

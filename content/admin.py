@@ -33,6 +33,12 @@ class ProductsAdmin(admin.ModelAdmin):
 @admin.register(crew_members)
 class ProductsAdmin(admin.ModelAdmin):
     list_display = ['title']
+    def has_add_permission(self, request):
+      num_objects = self.model.objects.count()
+      if num_objects >= 30:
+          return False
+      else:
+          return True
 
 
 @admin.register(achievement)
