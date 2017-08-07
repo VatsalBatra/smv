@@ -50,3 +50,14 @@ class contact_info(models.Model):
 class about(models.Model):
 	info =  models.TextField(max_length = 10024,default = " ",blank = True);
 
+class forum_form(models.Model):
+	email =  models.CharField(max_length = 1024,default = " " ,blank = True);
+	question = models.TextField(max_length = 1024,default =  " ",blank = False);
+	answers = models.TextField(max_length = 1024,default = " ",blank = False);
+
+
+class solution(models.Model):
+	question = models.ForeignKey(forum_form,on_delete=models.CASCADE)
+	ans = models.TextField(max_length = 1024,default = " ",blank = False);
+
+

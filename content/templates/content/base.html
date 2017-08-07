@@ -92,7 +92,7 @@
                     <!-- Set the first background image using inline CSS below. -->
                     <div class="fill" ><img class ="slide_img"src="{% static  "common/images/smv_slider4.jpg" %}" alt="My image"/></div>
                     <div class="carousel-caption">
-                        <h2>Caption 1</h2>
+                        <h2>DTU SUPERMILEAGE</h2>
                     </div>
                 </div>
                 {% for s in slide %}
@@ -179,6 +179,7 @@
 
 
     <!-- Our Crew Section -->
+<div id  = "relative wrapper">
     <div id ="crew"> <p> .</p>
     <p>. </p>
 
@@ -208,7 +209,7 @@ Everything since then will be deleted once you push again. To do that, the next 
      <!--    <div class ="post col-lg-2 " id =  "empty" >.</div> -->
         <div class ="post col-lg-4 " id =  "faculty_head" >
         {% for s in sir %}
-            <img  id ="faculty_pic " class="img"  src="{{ s.sir_img.url }}" alt="My image"/>
+            <img  id ="faculty_pic " class="img" style="height: 300px"  src="{{ s.sir_img.url }}" alt="My image"/>
             </div>
 <!--              <div class ="post col-lg-2 " id =  "empty" >.</div> -->
             <div  id ="faculty_disc" class ="col-lg-4 " >
@@ -253,8 +254,8 @@ Everything since then will be deleted once you push again. To do that, the next 
                         {% endif %}
                             <div class="col-sm-3 partners_img logo-div">
 
-                                <div id ="img_div"><p><a href="{{p.links}}"><img class="partner_inner_img" src="{{p.logo.url}}" width="200px" height="200px" alt="My image"/></a></p></div>
-                                <h3 class ="logo_heading"><a href="{{p.links}}">{{p.name}}</a></h3>
+                                <div id ="img_div"><p><img class="partner_inner_img" src="{{p.logo.url}}" width="200px" height="200px" alt="My image"/></p></div>
+                                <h3 class ="logo_heading"><a href="{{p.links}}" target="_blank" >{{p.name}}</a></h3>
                             </div>
                         {% if forloop.counter|divisibleby:"4" %}
 
@@ -283,14 +284,14 @@ Everything since then will be deleted once you push again. To do that, the next 
          <section class="do-social-link-section">
         <div class="container contact_property">
             <div class="row">
-                <a href="#" class="do-facebook">
+                <a href="https://www.facebook.com/DTUSupermileage/" class="do-facebook" target="_blank">
                     <span>
                         <i class="fa fa-facebook"></i>
                     </span>
                     FACEBOOK
                 </a>
             
-                <a href="#" class="do-twitter">
+                <a href="https://twitter.com/DTUsupermileage?s=09" class="do-twitter" target="_blank">
                     <span>
                         <i class="fa fa-twitter"></i>
                     </span>
@@ -298,20 +299,20 @@ Everything since then will be deleted once you push again. To do that, the next 
                 </a>
            
 
-            <a href="#" class="do-google" target="_blank">
+            <a href="https://plus.google.com/+DtusupermileageBlogspot" class="do-google" target="_blank">
                     <span>
-                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  <i class="fa fa-google-plus" aria-hidden="true" target="_blank"></i>
                     </span>
                        Google
 </a>
-            <a href="#" class="do-instagram" target="_blank">
+            <a href="https://www.instagram.com/p/-Uo2M9PQxB/" class="do-instagram" target="_blank">
                     <span>
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                     </span>
                     Instagram
 </a>
 
- <a href="#" class="do-youtube" target="_blank">
+ <a href="https://www.youtube.com/channel/UCmhsT2sLXRiRriLFry6mvxg" class="do-youtube" target="_blank">
                     <span>
                   <i class="fa fa-youtube-play" aria-hidden="true"></i>
                     </span>
@@ -357,6 +358,14 @@ Everything since then will be deleted once you push again. To do that, the next 
 
        {% endfor %}
       </div>
+      <H3> OR</H3>
+          <!--  FORUM -->
+      <div>
+             <div id ="interactive_button" class="col-lg-4"  >
+<a  class="push_button red" href="{% url 'forum' %}" target="_blank" >JOIN OUR INTERACTIVE FORUM</a>
+
+    </div>
+      </div>
                 </div>
 
             </div>
@@ -373,6 +382,7 @@ Everything since then will be deleted once you push again. To do that, the next 
 
         </section>
         </div>
+    </div>
            <script src="{% static 'common/js/jquery-2.2.1.min.js' %}"></script>
            <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
                <script src="{% static 'common/js/jquery.js' %}"></script> 

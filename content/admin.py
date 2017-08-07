@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import image_slide,our_ride,crew_sir,crew_members,partners,achievement,contact_info,about
+from .models import image_slide,our_ride,crew_sir,crew_members,partners,achievement,contact_info,about,forum_form
 
 
 #		THIS IS NOT WORKING WHY???
@@ -73,5 +73,9 @@ class ProductsAdmin(admin.ModelAdmin):
       		return False
     	else:
       		return True
+@admin.register(forum_form)
+class ProductsAdmin(admin.ModelAdmin):
+
+    list_display = ['email']
 
 # Register your models here.
