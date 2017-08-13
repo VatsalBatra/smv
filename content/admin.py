@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import image_slide,our_ride,crew_sir,crew_members,partners,achievement,contact_info,about,forum_form
+from .models import image_slide,our_ride,crew_sir,crew_members,partners,achievement,contact_info,about,forum_form,solution
 
 
 #		THIS IS NOT WORKING WHY???
@@ -77,5 +77,9 @@ class ProductsAdmin(admin.ModelAdmin):
 class ProductsAdmin(admin.ModelAdmin):
 
     list_display = ['email']
+@admin.register(solution)
+class ProductsAdmin(admin.ModelAdmin):
+
+    list_display = ['question','ans']
 
 # Register your models here.
