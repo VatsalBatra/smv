@@ -29,5 +29,7 @@ urlpatterns = [
     url(r'^forum/content/$',content_views.content,name = 'content'),
     url(r'^forum/addans/$',content_views.add_ans,name = "addans"),
     url(r'^forum/upload/$',content_views.upload,name = "upload"),
+    url(r'^forum/all_ans/$',content_views.all_ans,name = "all"),
     url(r'^admin/', admin.site.urls),
+
 ] + static.static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
