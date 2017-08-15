@@ -36,11 +36,17 @@
 			<div id = "question">
 			{% for q in ques_list %} 
 				<div class="doubt_div_ques"><p class = 'back_content'>{{ q.question }}</p> - {{ q.email }}</div>
-					<div class = 'ans_div_back'><textarea rows ='10' cols = '70' name = 'ans_description' class = 'ans_text' placeholder= 'enter your query...' ></textarea><br/><button type="button" class =' btn btn-outline-primary ans_submit_1'>Submit</button></div> <div id = {{ q.id}} class ='show_ans'}></div><button class = 'more_solution_1'>more answers...</button>	
+					<div class = 'ans_div_back'><textarea rows ='10' cols = '70' name = 'ans_description' class = 'ans_text' placeholder= 'your views...' ></textarea><br/><button type="button" class =' btn btn-outline-primary ans_submit_1'>Submit</button></div> <div id = {{ q.id}} class ='show_ans'}></div><button class = 'more_solution_1'>more answers...</button>	
 
 
 
 			{% endfor %}
+<!-- 
+			HOW TO MAKE THIS WORK  -->
+			<!-- {% for a in sol_save %}
+				<div id = {{q.question.id }}> <p class='back_content'>{{a.ans }}</p></div>
+						
+				{% endfor %} -->
 			</div>
 			<div id = "answer"></div>
 
@@ -178,15 +184,17 @@ div#up_arrow {
     box-shadow: 1px 1px 5px 1px;
     border-radius: 1px;
     margin-bottom: 22px;
-    background-color: aliceblue;
+    background-color:cornsilk;
 }
 button.more_solution_1 {
     background-color: transparent;
     border: white;
+    color: red;
 }
 button.more_solution {
     background-color: transparent;
     border: white;
+    color: red;
 }
 .ans_div_back {
     display: flex;
@@ -204,13 +212,14 @@ button.more_solution {
 var flag =0;
 	$(document).scroll(function(){
 
-		console.log(window.scrollY)
 		if(flag ==0){
 		if(window.scrollY > 250){
 			flag =1;
-		$("#doubt_div").animate({height: "10px"},1500);
+		$("#down_arrow").css("display",'flex')
+		$("#doubt_div").animate({height: "10px"},1000);
 		$("#doubt_content_div").css("display","none")
 		$("#solution").css("padding-top","5%")
+
 		$("#down_arrow").css("animation-name",'jump')
 
 				}
@@ -223,6 +232,7 @@ var flag =0;
 		$("#doubt_content_div").css("display","block")
 		console.log($("#question_submit").siblings()[7])
 		$("#solution").css("padding-top","20%")
+		$("#down_arrow").css("display",'none')
 		$("#down_arrow").css("animation-name",'none')
 		// animation-name: jump;
 

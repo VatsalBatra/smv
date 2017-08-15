@@ -102,7 +102,9 @@ var forum = (function(){
 	}
 	$(document).on('ajaxComplete',function(){
 		$(".ans_submit").off('click').click(function(){
-		var ques = $(this).parent().prev().prev().prev().find("p").text()
+		var ques = $(this).parent().prev().find("p").text()
+		console.log("question is:")
+		console.log(ques)
 		var sol = $(this).siblings()[0].value
 		$.ajax({
 			url:'addans/',

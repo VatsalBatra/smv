@@ -121,9 +121,12 @@ def content(request):
 
 	return JsonResponse(context,safe = False)
 def add_ans(request):
+	print("idiasjfs;dfhasljkdfbaslkdfbaskldfsajdfalsjkdfhaksjldfhaskjdfnaskjdfhadjlsfhasjkdfaskjdfbaskjdfbaskjbdf askjd faskjdbfakjsdbfkjasdbfadjksbfadjlsb fadjsbf adjs bfaks;d faks;d fk;asdbfajksdnfbkjaslbdnfasdnfa,.smdnfaskjdnfaskj.n")
+
 	a = request.GET.get('solution','')
 	q = request.GET.get('question','')
 	print(q)
+	print(a)
 	quest = forum_form.objects.get(question = q)
 	ques_id  = quest.id
 	ans  = solution(question = quest,ans = a )
